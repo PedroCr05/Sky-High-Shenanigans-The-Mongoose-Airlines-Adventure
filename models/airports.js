@@ -1,15 +1,16 @@
 const { Schema } = require(`mongoose`);
+const Flights = require(`./flights`);
 
 const Airports = new Schema(
   {
-    airline: ``,
-    flightNum: 1,
-    cost: 1,
-    numOfseats: 1,
-    departingAirport: ``,
-    arrivalAirport: ``,
-    departureDate: ``,
-    departureTime: ``,
+    airline: { type: String, require: true },
+    flightNum: { type: Number, require: true },
+    cost: { type: Number, require: true },
+    numOfseats: { type: Number, require: true },
+    departingAirport: { type: String, require: true },
+    arrivalAirport: { type: String, require: true },
+    departureDate: { type: String, require: true },
+    departureTime: { type: String, require: true },
   },
   { timestamps: true }
 );
