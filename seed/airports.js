@@ -28,7 +28,7 @@ const main = async () => {
   ];
 
   await Flights.insertMany(flights);
-  console.log(`Constructed new airports!`);
+  console.log(`Constructed new flights!`);
 };
 
 const run = async () => {
