@@ -1,5 +1,5 @@
-const { MongoGridFSChunkError } = require("mongodb");
 const { Schema } = require(`mongoose`);
+const Flights = require(`./flights`);
 
 const Airports = new Schema(
   {

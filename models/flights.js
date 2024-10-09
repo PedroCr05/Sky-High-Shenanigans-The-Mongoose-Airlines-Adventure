@@ -1,5 +1,4 @@
 const { Schema } = require(`mongoose`);
-const Airports = require(`./airports`);
 
 const Flights = new Schema(
   {

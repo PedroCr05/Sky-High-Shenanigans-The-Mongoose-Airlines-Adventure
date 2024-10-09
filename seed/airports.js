@@ -15,9 +15,20 @@ const main = async () => {
       location: `Arkansas`,
       code: `XNA`,
     },
+    {
+      name: `Incheon International Airport`,
+      location: `South Korea`,
+      code: `ICN`,
+    },
+    {
+      name: `Sydney Kingsford Smith Airport`,
+      location: `New South Wales`,
+      code: `SYD`,
+    },
   ];
+
   await Flights.insertMany(flights);
-  console.log(`Created flights!`);
+  console.log(`Constructed new airports!`);
 };
 
 const run = async () => {
