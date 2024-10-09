@@ -1,4 +1,4 @@
-const { Schema } = require(`mongoose`);
+const { Schema, SchemaType } = require(`mongoose`);
 
 const Flights = new Schema(
   {
@@ -8,8 +8,7 @@ const Flights = new Schema(
     numOfseats: { type: Number, require: true },
     departingAirport: { type: String, require: true },
     arrivalAirport: { type: String, require: true },
-    departureDate: { type: String, require: true },
-    departureTime: { type: String, require: true },
+    departureDate_id: { type: Schema.Types.ObjectId, ref: `departureDate_id ` },
   },
   { timestamps: true }
 );
