@@ -2,7 +2,7 @@ const mongoose = require(`mongoose`);
 
 mongoose
   .connect(
-    `mongodb+srv://PedroCr05:QzzDuBxSIezs9Mha@clusters.k4z0f.mongodb.net/Sky-High-Shenanigans-The-Mongoose-Airlines-Adventure?retryWrites=true&w=majority&appName=clusters`
+    `mongodb+srv://PedroCr05:---------------@clusters.k4z0f.mongodb.net/Sky-High-Shenanigans-The-Mongoose-Airlines-Adventure?retryWrites=true&w=majority&appName=clusters`
   )
   .then(() => {
     console.log(`Successfully connected to MongoDB.`);
