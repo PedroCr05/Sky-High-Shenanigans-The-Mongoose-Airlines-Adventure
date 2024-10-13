@@ -1,9 +1,9 @@
-const { Schema, default: mongoose } = require(`mongoose`);
+const mongoose = require(`mongoose`);
 const AirportsSchema = require(`./airports`);
-const FlightsSchema = require(`./airports`);
+const FlightsSchema = require(`./flights`);
 
-const Airports = mongoose.model(`Airports`, AirportsSchema);
-const Flights = mongoose.model(`Flights`, FlightsSchema);
+const Airports = mongoose.model(`Airport`, AirportsSchema);
+const Flights = mongoose.model(`Flight`, FlightsSchema);
 
 module.exports = {
   Airports,

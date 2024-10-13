@@ -4,6 +4,7 @@ const { Airports } = require(`../models`);
 db.on(`error`, console.error.bind(console, `MongoDB connection error:`));
 
 const main = async () => {
+  await Airports.deleteMany();
   const airports = [
     {
       name: `Los Angeles International Airport`,
@@ -21,14 +22,38 @@ const main = async () => {
       code: `ICN`,
     },
     {
-      name: `Sydney Kingsford Smith Airport`,
-      location: `New South Wales`,
-      code: `SYD`,
+      name: `Gimpo Int'l`,
+      location: `Seoul, South Korea`,
+      code: `GMP`,
+    },
+    {
+      name: `Houston Bush Int'ctl`,
+      location: `House Texas`,
+      code: `IAH`,
+    },
+    {
+      name: `Jeju International Airport`,
+      location: `Jeju City, South Korea`,
+      code: `CJU`,
+    },
+    {
+      name: `Cheongju International Airport`,
+      location: `Cheongju, South Korea`,
+      code: `CJJ`,
+    },
+    {
+      name: `Haneda Airport`,
+      location: `Ōta, Tokyo, Japan`,
+      code: `HND`,
     },
   ];
 
-  await Flights.insertMany(flights);
-  console.log(`Constructed new flights!`);
+  await Airports.insertMany(airports);
+  console.log(`
+        =================================
+        +=+=+=+[Airports created!]=+=+=+=
+        =================================
+    `);
 };
 
 const run = async () => {
